@@ -1,0 +1,13 @@
+import socket
+
+ports = [21, 23, 80, 443, 8080]
+
+## in the line 10 i use the bancocn.com for example to run the scan but you have to change it before using the script ##
+
+for ports in ports:
+    client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    client.settimeout(0.1)
+    code = client.connect_ex(('bancocn.com', ports))
+    if code == 0:
+        print (ports, "OPEN")
+
