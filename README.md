@@ -1,2 +1,2 @@
 # Portscan
-Script to find open doors in sites
+Script to find open ports in sites
